@@ -6,7 +6,7 @@ def capital_fruit():
 
     fruit = ["banana", "apple", "orange", "kiwi", "kumquat"]
 
-    return [] # <<--- write your list comprehension here
+    return [item.capitalize() for item in fruit] # <<--- write your list comprehension here
 
 
 
@@ -18,7 +18,9 @@ def reversed_fruit():
 
     fruit = ["banana", "apple", "orange", "kiwi", "squash"]
 
-    return []
+    return[item[::-1] for item in fruit ]
+
+
 
 
 
@@ -30,7 +32,7 @@ def unspaced_fruit():
 
     fruit = ["    banana", "apple     ", "ora  nge", " k i w i ", "star fruit"]
 
-    return []
+    return [item.replace(" ", "") for item in fruit]
 
 
 
@@ -42,7 +44,7 @@ def upversed_fruit():
 
     fruit = ["banana", "apple", "orange", "kiwi", "peach"]
 
-    return []
+    return [item[::-1].upper() for item in fruit]
 
 
 
@@ -60,7 +62,7 @@ def inauguration_dates():
         { "name": "James Monroe", "inauguration": 1817 },
     ]
 
-    return []
+    return [item["inauguration"] for item in us_presidents]
 
 
 
@@ -83,7 +85,7 @@ def say_names():
         ("Chelsea", "Green")
     ]
 
-    return []
+    return [item[0] + " " + item[1] for item in some_people]
 
 
 
@@ -95,7 +97,7 @@ def get_dogs():
 
     pets = ["dog", "cat", "dog", "dog", "cat", "dog", "cat", "dog"]
 
-    return []
+    return [ pet for pet in pets if pet == "dog"]
 
 
 
@@ -107,7 +109,7 @@ def get_evens():
 
     numbers = [1, 8, 9, 99, 16, 20, 21]
 
-    return []
+    return [number for number in numbers if number % 2 == 0 ]
 
 
 
@@ -119,7 +121,7 @@ def squared_numbers():
 
     numbers = range(1,10)
 
-    return []
+    return [number**2 for number in numbers]
 
 
 
@@ -136,4 +138,4 @@ def summed_lists():
         [21,7,3,4,1,6]
     ]
 
-    return []
+    return [sum(num_range_list) for num_range_list in number_lists ]
